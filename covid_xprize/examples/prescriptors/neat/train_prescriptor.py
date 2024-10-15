@@ -12,11 +12,13 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-from covid_xprize.examples.prescriptors.neat.utils import PRED_CASES_COL, prepare_historical_df, CASES_COL, IP_COLS, \
+from utils import PRED_CASES_COL, prepare_historical_df, CASES_COL, IP_COLS, \
     IP_MAX_VALUES, add_geo_id, get_predictions
 
+from pydoc import importfile
+cost_generator = importfile("/C:/Python Projects/Neuroevolution HW/covid-xprize-cs378ne/covid_xprize/validation/cost_generator.py")
 # Cutoff date for training data
-from covid_xprize.validation.cost_generator import generate_costs
+from cost_generator import generate_costs
 
 # Path where this script lives
 ROOT_DIR = Path(os.path.dirname(os.path.abspath(__file__)))

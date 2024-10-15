@@ -6,8 +6,9 @@ import tempfile
 import urllib.request
 import pandas as pd
 from pathlib import Path
-
-from covid_xprize.validation.scenario_generator import get_raw_data, generate_scenario
+from pydoc import importfile
+scenario_generator = importfile("/C:/Python Projects/Neuroevolution HW/covid-xprize-cs378ne/covid_xprize/validation/scenario_generator.py")
+from scenario_generator import get_raw_data, generate_scenario
 
 # URL for Oxford data
 DATA_URL =\
