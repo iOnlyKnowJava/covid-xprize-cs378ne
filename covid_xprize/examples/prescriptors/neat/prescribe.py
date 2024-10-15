@@ -8,7 +8,7 @@ import pandas as pd
 from copy import deepcopy
 from datetime import datetime
 
-import neat
+import covid_xprize.examples.prescriptors.neat
 
 # Function imports from utils
 from pathlib import Path
